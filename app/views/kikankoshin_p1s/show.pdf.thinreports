@@ -1,0 +1,8 @@
+report.start_new_page do |page|
+  report.page.item(:Immigration).value('@kikankoshin_p1.Immigration')
+  report.page.item(:Nationality).value('@kikankoshin_p1.Nationality')
+  report.page.item(:BirthYear).value('@kikankoshin_p1.BirthYear')
+  report.page.item(:BirthMonth).value('@kikankoshin_p1.BirthMonth')
+  report.page.item(:BirthDay).value('@kikankoshin_p1.BirthDay')
+  report.page.item(:ApplicantName).value('@kikankoshin_p1.ApplicantName')
+end
