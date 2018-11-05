@@ -1,0 +1,372 @@
+<%= form_with(model: kikankoshin_p1, local: true) do |form| %>
+  <% if kikankoshin_p1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kikankoshin_p1.errors.count, "error") %> prohibited this kikankoshin_p1 from being saved:</h2>
+
+      <ul>
+      <% kikankoshin_p1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Immigration %>
+    <%= form.text_field :Immigration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nationality %>
+    <%= form.text_field :Nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BirthYear %>
+    <%= form.number_field :BirthYear %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BirthMonth %>
+    <%= form.number_field :BirthMonth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BirthDay %>
+    <%= form.number_field :BirthDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ApplicantName %>
+    <%= form.text_field :ApplicantName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Sex %>
+    <%= form.text_field :Sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PlaceOfBirth %>
+    <%= form.text_field :PlaceOfBirth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :MaritalStatus %>
+    <%= form.text_field :MaritalStatus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Occupation %>
+    <%= form.text_field :Occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :HomeTown %>
+    <%= form.text_field :HomeTown %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Address %>
+    <%= form.text_field :Address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Telephone %>
+    <%= form.text_field :Telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cellular %>
+    <%= form.text_field :Cellular %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PassportNumber %>
+    <%= form.text_field :PassportNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PassportExpirationYear %>
+    <%= form.number_field :PassportExpirationYear %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PassportExpirationMonth %>
+    <%= form.number_field :PassportExpirationMonth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PassportExpirationDay %>
+    <%= form.number_field :PassportExpirationDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :StatusOf %>
+    <%= form.text_field :StatusOf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Residence %>
+    <%= form.text_field :Residence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PeriodOfStay %>
+    <%= form.text_field :PeriodOfStay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResideceExpirationYear %>
+    <%= form.number_field :ResideceExpirationYear %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidenceExpirationMonth %>
+    <%= form.number_field :ResidenceExpirationMonth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidenceExpirationDay %>
+    <%= form.number_field :ResidenceExpirationDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidenceCard %>
+    <%= form.text_field :ResidenceCard %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DesireLength %>
+    <%= form.text_field :DesireLength %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reason %>
+    <%= form.text_field :Reason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CriminalRecord %>
+    <%= form.text_field :CriminalRecord %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CriminalDetail %>
+    <%= form.text_field :CriminalDetail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship1 %>
+    <%= form.text_field :FamilyRelationship1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName1 %>
+    <%= form.text_field :FamilyName1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday1 %>
+    <%= form.text_field :FamilyBirthday1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality1 %>
+    <%= form.text_field :FamilyNationality1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith1 %>
+    <%= form.text_field :ResidingWith1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany1 %>
+    <%= form.text_field :FamilyCompany1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber1 %>
+    <%= form.text_field :FamilyResidenceNumber1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship2 %>
+    <%= form.text_field :FamilyRelationship2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName2 %>
+    <%= form.text_field :FamilyName2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday2 %>
+    <%= form.text_field :FamilyBirthday2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality2 %>
+    <%= form.text_field :FamilyNationality2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith2 %>
+    <%= form.text_field :ResidingWith2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany2 %>
+    <%= form.text_field :FamilyCompany2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber2 %>
+    <%= form.text_field :FamilyResidenceNumber2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship3 %>
+    <%= form.text_field :FamilyRelationship3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName3 %>
+    <%= form.text_field :FamilyName3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday3 %>
+    <%= form.text_field :FamilyBirthday3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality3 %>
+    <%= form.text_field :FamilyNationality3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith3 %>
+    <%= form.text_field :ResidingWith3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany3 %>
+    <%= form.text_field :FamilyCompany3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber3 %>
+    <%= form.text_field :FamilyResidenceNumber3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship4 %>
+    <%= form.text_field :FamilyRelationship4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName4 %>
+    <%= form.text_field :FamilyName4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday4 %>
+    <%= form.text_field :FamilyBirthday4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality4 %>
+    <%= form.text_field :FamilyNationality4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith4 %>
+    <%= form.text_field :ResidingWith4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany4 %>
+    <%= form.text_field :FamilyCompany4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber4 %>
+    <%= form.text_field :FamilyResidenceNumber4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship5 %>
+    <%= form.text_field :FamilyRelationship5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName5 %>
+    <%= form.text_field :FamilyName5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday5 %>
+    <%= form.text_field :FamilyBirthday5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality5 %>
+    <%= form.text_field :FamilyNationality5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith5 %>
+    <%= form.text_field :ResidingWith5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany5 %>
+    <%= form.text_field :FamilyCompany5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber5 %>
+    <%= form.text_field :FamilyResidenceNumber5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyRelationship6 %>
+    <%= form.text_field :FamilyRelationship6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyName6 %>
+    <%= form.text_field :FamilyName6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyBirthday6 %>
+    <%= form.text_field :FamilyBirthday6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyNationality6 %>
+    <%= form.text_field :FamilyNationality6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ResidingWith6 %>
+    <%= form.text_field :ResidingWith6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyCompany6 %>
+    <%= form.text_field :FamilyCompany6 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :FamilyResidenceNumber6 %>
+    <%= form.text_field :FamilyResidenceNumber6 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

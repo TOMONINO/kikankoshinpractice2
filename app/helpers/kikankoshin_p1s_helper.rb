@@ -1,0 +1,2 @@
+module KikankoshinP1sHelper
+end
