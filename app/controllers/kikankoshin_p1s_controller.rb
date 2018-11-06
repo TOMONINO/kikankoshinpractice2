@@ -10,6 +10,30 @@ class KikankoshinP1sController < ApplicationController
   # GET /kikankoshin_p1s/1
   # GET /kikankoshin_p1s/1.json
   def show
+    respond_to do |format|
+      format.html # show.html.erb
+      format.pdf do
+        @kikankoshin_p1 = KikankoshinP1.find_by(id: params[:id])
+        # Thin ReportsでPDFを作成
+        # tlfファイルを読み込む
+        report = ThinReports::Report.new layout: File.join(Rails.root, 'app', 'views', 'kikankoshin_p1s', 'show.tlf')
+        # 1ページ目を開始
+        report.start_new_page
+        # データを送信
+        report.page.item(:Immigration).value(@kikankoshin_p1.Immigration)
+        report.page.item(:Nationality).value(@kikankoshin_p1.Nationality)
+        report.page.item(:BirthYear).value(@kikankoshin_p1.BirthYear)
+        report.page.item(:BirthMonth).value(@kikankoshin_p1.BirthMonth)
+        report.page.item(:BirthDay).value(@kikankoshin_p1.BirthDay)
+        report.page.item(:ApplicantName).value(@kikankoshin_p1.ApplicantName)
+        # ブラウザでPDFを表示する
+        # disposition: "inline" によりダウンロードではなく表示させている
+        send_data report.generate, 
+                  filename: "#{@kikankoshin_p1.id}.pdf",
+                  type:        "application/pdf",
+                  disposition: "inline"
+      end
+    end
   end
 
   # GET /kikankoshin_p1s/new
