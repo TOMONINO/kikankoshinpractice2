@@ -66,3 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'thinreports'
 
 gem 'bcrypt'
+
+gem 'enum_select_rails'
