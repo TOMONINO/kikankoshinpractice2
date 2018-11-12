@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get '/index' => 'home#index'
+  
   get 'login' => 'users#login_form'
   
   post 'login' => 'users#login'
