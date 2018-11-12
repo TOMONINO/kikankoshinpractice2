@@ -211,8 +211,14 @@ class KikankoshinP1sController < ApplicationController
   # POST /kikankoshin_p1s
   # POST /kikankoshin_p1s.json
   def create
+    #@current_user = User.find_by(id: session[:user_id])
+    #@kikankoshin_p1 = KikankoshinP1.new(
+     # kikankoshin_p1_params,
+     # user_id: @current_user.id
+   # )
+    
     @kikankoshin_p1 = KikankoshinP1.new(kikankoshin_p1_params)
-
+    
     respond_to do |format|
       if @kikankoshin_p1.save
         format.html { redirect_to @kikankoshin_p1, notice: 'Kikankoshin p1 was successfully created.' }
