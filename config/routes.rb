@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'koshindocument/spouse' => 'koshindocument#spouse'
+  
+  get 'koshindocument/tkoshin' => 'koshindocument#tkoshin'
+  
   get '/index' => 'home#index'
   
   get 'login' => 'users#login_form'
