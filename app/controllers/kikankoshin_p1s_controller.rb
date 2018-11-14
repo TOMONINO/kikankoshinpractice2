@@ -1,5 +1,6 @@
 class KikankoshinP1sController < ApplicationController
   before_action :set_kikankoshin_p1, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /kikankoshin_p1s
   # GET /kikankoshin_p1s.json
@@ -211,13 +212,8 @@ class KikankoshinP1sController < ApplicationController
   # POST /kikankoshin_p1s
   # POST /kikankoshin_p1s.json
   def create
-    #@current_user = User.find_by(id: session[:user_id])
-    #@kikankoshin_p1 = KikankoshinP1.new(
-     # kikankoshin_p1_params,
-     # user_id: @current_user.id
-   # )
-    
     @kikankoshin_p1 = KikankoshinP1.new(kikankoshin_p1_params)
+    @kikankoshin_p1.user = @current_user
     
     respond_to do |format|
       if @kikankoshin_p1.save

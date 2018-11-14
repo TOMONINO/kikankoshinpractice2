@@ -68,3 +68,7 @@ gem 'thinreports'
 gem 'bcrypt'
 
 gem 'enum_select_rails'
+
+gem 'hirb'
+
+gem 'hirb-unicode'
