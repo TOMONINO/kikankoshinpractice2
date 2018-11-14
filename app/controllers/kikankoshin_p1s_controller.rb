@@ -28,17 +28,17 @@ class KikankoshinP1sController < ApplicationController
         report.page.item(:BirthMonth).value(@kikankoshin_p1.BirthMonth)
         report.page.item(:BirthDay).value(@kikankoshin_p1.BirthDay)
         report.page.item(:ApplicantName).value(@kikankoshin_p1.ApplicantName)
-        #if sex == 1
-          #report.page.item(:Male).value('○')
-        #else
-          #report.page.item(:Female).value('○')
-        #end
+        if @kikankoshin_p1.Sex == "Male"
+          report.page.item(:Male).value('○')
+        else
+          report.page.item(:Female).value('○')
+        end
         report.page.item(:PlaceOfBirth).value(@kikankoshin_p1.PlaceOfBirth)
-        #if maritalstatus == 1
-          #report.page.item(:Married).value('○')
-        #else
-          #report.page.item(:Single).value('○')
-        #end
+        if @kikankoshin_p1.MaritalStatus == "Married"
+          report.page.item(:Married).value('○')
+        else
+          report.page.item(:Single).value('○')
+        end
         report.page.item(:Occupation).value(@kikankoshin_p1.Occupation)
         report.page.item(:HomeTown).value(@kikankoshin_p1.Occupation)
         report.page.item(:Address).value(@kikankoshin_p1.Address)
@@ -56,76 +56,76 @@ class KikankoshinP1sController < ApplicationController
         report.page.item(:ResidenceCard).value(@kikankoshin_p1.ResidenceCard)
         report.page.item(:DesireLength).value(@kikankoshin_p1.DesireLength)
         report.page.item(:Reason).value(@kikankoshin_p1.Reason)
-        #if criminalrecord == 1
-          #report.page.item(:Yes).value('○')
-        #else
-          #report.page.item(:No).value('○')
-        #end
+        if @kikankoshin_p1.CriminalRecord == "Yes"
+          report.page.item(:Yes).value('○')
+        else
+          report.page.item(:No).value('○')
+        end
         report.page.item(:CriminalDetail).value(@kikankoshin_p1.CriminalDetail)
         report.page.item(:FamilyRelationship1).value(@kikankoshin_p1.FamilyRelationship1)
         report.page.item(:FamilyName1).value(@kikankoshin_p1.FamilyName1)
         report.page.item(:FamilyBirthday1).value(@kikankoshin_p1.FamilyBirthday1)
         report.page.item(:FamilyNationality1).value(@kikankoshin_p1.FamilyNationality1)
-        #if residingwith1 == 1
-          #report.page.item(:Ryes1).value('○')
-        #else
-          #report.page.item(:Rno1).value('○')
-        #end
+        if @kikankoshin_p1.ResidingWith1 == "Yes"
+          report.page.item(:Ryes1).value('○')
+        else
+          report.page.item(:Rno1).value('○')
+        end
         report.page.item(:FamilyCompany1).value(@kikankoshin_p1.FamilyCompany1)
         report.page.item(:FamilyResidenceNumber1).value(@kikankoshin_p1.FamilyResidenceNumber1)
         report.page.item(:FamilyRelationship2).value(@kikankoshin_p1.FamilyRelationship2)
         report.page.item(:FamilyName2).value(@kikankoshin_p1.FamilyName2)
         report.page.item(:FamilyBirthday2).value(@kikankoshin_p1.FamilyBirthday2)
         report.page.item(:FamilyNationality2).value(@kikankoshin_p1.FamilyNationality2)
-        #if residingwith2 == 1
-          #report.page.item(:Ryes2).value('○')
-        #else
-          #report.page.item(:Rno2).value('○')
-        #end
+        if @kikankoshin_p1.ResidingWith2 == "Yes"
+          report.page.item(:Ryes2).value('○')
+        else
+          report.page.item(:Rno2).value('○')
+        end
         report.page.item(:FamilyCompany2).value(@kikankoshin_p1.FamilyCompany2)
         report.page.item(:FamilyResidenceNumber2).value(@kikankoshin_p1.FamilyResidenceNumber2)
         report.page.item(:FamilyRelationship3).value(@kikankoshin_p1.FamilyRelationship3)
         report.page.item(:FamilyName3).value(@kikankoshin_p1.FamilyName3)
         report.page.item(:FamilyBirthday3).value(@kikankoshin_p1.FamilyBirthday3)
         report.page.item(:FamilyNationality3).value(@kikankoshin_p1.FamilyNationality3)
-        #if residingwith3 == 1
-          #report.page.item(:Ryes3).value('○')
-        #else
-          #report.page.item(:Rno3).value('○')
-        #end
+        if @kikankoshin_p1.ResidingWith3 == "Yes"
+          report.page.item(:Ryes3).value('○')
+        else
+          report.page.item(:Rno3).value('○')
+        end
         report.page.item(:FamilyCompany3).value(@kikankoshin_p1.FamilyCompany3)
         report.page.item(:FamilyResidenceNumber3).value(@kikankoshin_p1.FamilyResidenceNumber3)
         report.page.item(:FamilyRelationship4).value(@kikankoshin_p1.FamilyRelationship4)
         report.page.item(:FamilyName4).value(@kikankoshin_p1.FamilyName4)
         report.page.item(:FamilyBirthday4).value(@kikankoshin_p1.FamilyBirthday4)
         report.page.item(:FamilyNationality4).value(@kikankoshin_p1.FamilyNationality4)
-        #if residingwith4 == 1
-          #report.page.item(:Ryes4).value('○')
-        #else
-          #report.page.item(:Rno4).value('○')
-        #end
+        if @kikankoshin_p1.ResidingWith4 == "Yes"
+          report.page.item(:Ryes4).value('○')
+        else
+          report.page.item(:Rno4).value('○')
+        end
         report.page.item(:FamilyCompany4).value(@kikankoshin_p1.FamilyCompany4)
         report.page.item(:FamilyResidenceNumber4).value(@kikankoshin_p1.FamilyResidenceNumber4)
         report.page.item(:FamilyRelationship5).value(@kikankoshin_p1.FamilyRelationship5)
         report.page.item(:FamilyName5).value(@kikankoshin_p1.FamilyName5)
         report.page.item(:FamilyBirthday5).value(@kikankoshin_p1.FamilyBirthday5)
         report.page.item(:FamilyNationality5).value(@kikankoshin_p1.FamilyNationality5)
-        #if residingwith5 == 1
-          #report.page.item(:Ryes5).value('○')
-        #else
-          #report.page.item(:Rno5).value('○')
-        #end
+        if @kikankoshin_p1.ResidingWith5 == "Yes"
+          report.page.item(:Ryes5).value('○')
+        else
+          report.page.item(:Rno5).value('○')
+        end
         report.page.item(:FamilyCompany5).value(@kikankoshin_p1.FamilyCompany5)
         report.page.item(:FamilyResidenceNumber5).value(@kikankoshin_p1.FamilyResidenceNumber5)
         report.page.item(:FamilyRelationship6).value(@kikankoshin_p1.FamilyRelationship6)
         report.page.item(:FamilyName6).value(@kikankoshin_p1.FamilyName6)
         report.page.item(:FamilyBirthday6).value(@kikankoshin_p1.FamilyBirthday6)
         report.page.item(:FamilyNationality6).value(@kikankoshin_p1.FamilyNationality6)
-        #if residingwith6 == 1
-         #report.page.item(:Ryes6).value('○')
-        #else
+        if @kikankoshin_p1.ResidingWith6 == "Yes"
+         report.page.item(:Ryes6).value('○')
+        else
           report.page.item(:Rno6).value('○')
-        #end
+        end
         report.page.item(:FamilyCompany6).value(@kikankoshin_p1.FamilyCompany6)
         report.page.item(:FamilyResidenceNumber6).value(@kikankoshin_p1.FamilyResidenceNumber6)
         
