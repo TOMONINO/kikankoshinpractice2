@@ -6,4 +6,8 @@ class User < ApplicationRecord
   
   validates :email, {presence: true, uniqueness: true}
   
+  def kikankoshin_p1s
+    return Kikankoshin_p1.where(user_id: self.id)
+  end
+  
 end

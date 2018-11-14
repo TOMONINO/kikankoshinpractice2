@@ -15,6 +15,7 @@ class KikankoshinP1sController < ApplicationController
       format.html # show.html.erb
       format.pdf do
         @kikankoshin_p1 = KikankoshinP1.find_by(id: params[:id])
+        @user = @kikankoshin_p1.user
         # Thin ReportsでPDFを作成
         # tlfファイルを読み込む
         report = Thinreports::Report.new layout: File.join(Rails.root, 'app', 'views', 'kikankoshin_p1s', 'show.tlf')
